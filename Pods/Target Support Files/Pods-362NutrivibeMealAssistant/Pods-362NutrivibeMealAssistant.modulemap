@@ -1,0 +1,6 @@
+framework module Pods_362NutrivibeMealAssistant {
+  umbrella header "Pods-362NutrivibeMealAssistant-umbrella.h"
+
+  export *
+  module * { export * }
+}
