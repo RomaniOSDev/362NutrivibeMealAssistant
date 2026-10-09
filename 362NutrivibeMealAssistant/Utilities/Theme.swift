@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 import UIKit
+import WebKit
 
 enum AppLinks {
     static let privacy = "https://nutrivibemealassistant362.site/privacy/474"
@@ -116,7 +117,7 @@ final class KeyboardDismissTap: NSObject, UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         var view = touch.view
         while let current = view {
-            if current is UITextField || current is UITextView { return false }
+            if current is UITextField || current is UITextView || current is WKWebView { return false }
             view = current.superview
         }
         return true
